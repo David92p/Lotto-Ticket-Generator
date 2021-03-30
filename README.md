@@ -10,8 +10,10 @@
       - The extraction of the numbers is performed on the basis of a logic of form transmitted 
         by the BasicGame Class.
         
-### 3 header:
+### 3 [header:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/header.py)
       - This script takes care of printing a header of our ticket on the screen.
+
+### 4 [test:]()
          
     
 
