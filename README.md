@@ -13,7 +13,8 @@
 ### 3 [header:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/header.py)
       - This script takes care of printing a header of our ticket on the screen.
 
-### 4 [test:]()
+### 4 [ticket:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/ticket.py)
+      - This script builds the body of our ticket using instances inherited from the Lotto Class
          
     
 
