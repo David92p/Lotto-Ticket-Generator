@@ -2,7 +2,7 @@
 
 ### The first branch will have inside a packcage called "lottoproject" which will take care of dividing the code:
 ### - basic.py: 
-   #### This script introduces a Class named BasicGame that checks and instantiates an object of type city and form
+         This script introduces a Class named BasicGame that checks and instantiates an object of type city and form
     
 
 The following file contains a class called Lotto() which instantiates three parameters such as type of spin, wheel to play, and numbers.
