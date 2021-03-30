@@ -1,7 +1,7 @@
 # This is the first step to start playing.
 
 ## The first branch will have inside a packcage called "lottoproject" which will take care of dividing the code:
-### 1 <a href="https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/basic.py">basic</a>: 
+### 1 [basic](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/basic.py)
       - This script introduces a Class named BasicGame that checks and instantiates an object of 
         type city and form.
 
