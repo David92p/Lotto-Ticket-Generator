@@ -6,7 +6,6 @@
         type city and form.
 
 ### 2 game:
-http://github.com - automatic!
       - This script introduces a sub-class named Lot which instantiates a list of randomly drawn numbers.
       - The extraction of the numbers is performed on the basis of a logic of form transmitted 
         by the BasicGame Class.
