@@ -2,13 +2,13 @@
 
 ## The first branch will have inside a packcage called "lottoproject" which will take care of dividing the code:
 ### 1 basic: 
-      - This script introduces a Class named BasicGame that checks and instantiates 
-        an object of type city and form.
+      - This script introduces a Class named BasicGame that checks and instantiates an object of 
+        type city and form.
 
 ### 2 game:
       - This script introduces a sub-class named Lot which instantiates a list of randomly drawn numbers.
-      - The extraction of the numbers is performed on the basis of a logic of form
-        transmitted by the BasicGame Class.
+      - The extraction of the numbers is performed on the basis of a logic of form transmitted 
+        by the BasicGame Class.
         
 ### 3 header:
       - This script takes care of printing a header of our ticket on the screen.
