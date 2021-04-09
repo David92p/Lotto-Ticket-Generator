@@ -8,6 +8,9 @@ class Ticket(Lotto):
         super().__init__(city, form, numbers)
 
     def define_ticket(self):
+        Header.horizontal()
+        Header.vertical()
+        Header.horizontal()
         print("|", end="")
         for space in range(10):
             print(end=" ")
@@ -80,8 +83,5 @@ class Ticket(Lotto):
 
 if __name__ == "__main__":
     ticket = Ticket()
-    Header.horizontal()
-    Header.vertical()
-    Header.horizontal()
     Ticket.define_ticket(ticket)
 
