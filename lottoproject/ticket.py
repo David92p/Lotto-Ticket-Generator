@@ -1,5 +1,5 @@
-from lottoproject.game import Lotto
-from lottoproject.header import Header
+from game import Lotto
+from header import Header
 
 
 #The following class inherits from the Lotto class the necessary instances to be inserted into a table
