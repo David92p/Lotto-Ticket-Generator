@@ -10,7 +10,7 @@
 ### 3 [printer:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/printer.py)
       - This script introduces the Printed class which takes care of printing a header and a body on the screen.
 
-### 4 [lotto:]https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/lotto.py)
+### 4 [lotto:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/lotto.py)
       - This script introduces the Lotto class. This will be our business logic class
          
 ### 5 [test:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/test.py)
