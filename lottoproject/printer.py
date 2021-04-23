@@ -95,7 +95,4 @@ class Printed:
             print("*", end="")
         print("#")
 
-if __name__ == "__main__":
-    ticket = Printed.body()
-    #Ticket.define_ticket(ticket)
 
