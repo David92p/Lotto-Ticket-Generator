@@ -1,19 +1,17 @@
-from ticket import Ticket
+from lotto import Lotto
 
 import argparse
 
 
 def start(n):
-    tickets = dict()
-    for key in range(n):
-        tickets[key] = Ticket()
-
-    count_ticket = 1
-    for key, values in tickets.items():
-        print(f"Ticket Number {count_ticket}")
-        Ticket.define_ticket(values)
+    tickets = []
+    for i in range(n):
+        tickets.append(Lotto())
+  
+    for i, ticket in enumerate(tickets, 1):
+        print(f"Ticket Number {i}")
+        Lotto.print_ticket(ticket)
         print()
-        count_ticket += 1
     print()
     print("---------> Good Luck <---------")
     print()
