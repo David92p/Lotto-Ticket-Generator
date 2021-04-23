@@ -4,7 +4,7 @@ from printer import Printed
 
 from random import sample
 
-# The following class, after inheriting a correct city and form, takes care of instantiating a list of numbers in the correct way
+# Logic Class
 class Lotto:
     def __init__(self, city="", form="", numbers=""):
         self.city = City.check_cities()
@@ -47,5 +47,5 @@ class Lotto:
 # test
 if __name__ == "__main__":
     ticket = Lotto()
-    print(ticket)
+    Lotto.print_ticket(ticket)
 

@@ -1,4 +1,3 @@
-#The following class inherits from the Lotto class the necessary instances to be inserted into a table
 class Printed:
     max_horizontal_characters = 35
     title = "LOTTO TICKET"
@@ -95,4 +94,8 @@ class Printed:
             print("*", end="")
         print("#")
 
-
+# test
+if __name__ == "__main__":
+    ticket = Printed("test form", "test city", [1,2,3,4,5,6])
+    Printed.header()
+    Printed.body(ticket)

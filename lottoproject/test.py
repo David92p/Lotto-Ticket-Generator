@@ -9,6 +9,7 @@ def start(n):
         tickets.append(Lotto())
   
     for i, ticket in enumerate(tickets, 1):
+        print()
         print(f"Ticket Number {i}")
         Lotto.print_ticket(ticket)
         print()
