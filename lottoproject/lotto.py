@@ -18,19 +18,22 @@ class Lotto:
             Example:          --> "TERNO" MIN 3 NUMBERS MAX 10 NUMBERS <--
             """)
         while True:
-            n = int(input("Enter the amount of numbers you want to play: "))
-            if self.form == "ambata" and 1 <= n <= 10:
-                break
-            elif self.form == "ambo" and 2 <= n <= 10:
-                break
-            elif self.form == "terno" and 3 <= n <= 10:
-                break
-            elif self.form == "quaterna" and 4 <= n <= 10:
-                break
-            elif self.form == "cinquina" and 5 <= n <= 10:
-                break
-            else:
-                print("It is not possible to play this amount of numbers for the desired form of bet")
+            try:
+                n = int(input("Enter the amount of numbers you want to play: "))
+                if self.form == "ambata" and 1 <= n <= 10:
+                    break
+                elif self.form == "ambo" and 2 <= n <= 10:
+                    break
+                elif self.form == "terno" and 3 <= n <= 10:
+                    break
+                elif self.form == "quaterna" and 4 <= n <= 10:
+                    break
+                elif self.form == "cinquina" and 5 <= n <= 10:
+                    break
+                else:
+                    print("It is not possible to play this amount of numbers for the desired form of bet")
+            except ValueError:
+                print("Enter a numeric value")
 
         self.numbers = list(sample(range(1, 90 + 1), n))
         return self.numbers
