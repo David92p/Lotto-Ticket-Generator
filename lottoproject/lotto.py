@@ -1,54 +1,93 @@
 from city import City
-from form import Form
-from printer import Printed
-
-from random import sample
+from bet import TicketType
+from numbers import Numbers
+from ticket import Ticket
 
 # Logic Class
 class Lotto:
-    def __init__(self, city="", form="", numbers=""):
-        self.city = City.check_cities()
-        self.form = Form.check_form()
-        self.numbers = Lotto.generator_numbers(self)
+    def __init__(self, quantity_tickets):
+        self.tickets = []
+        Lotto.generate_ticket(self, quantity_tickets)
+        
+    # The following function takes care of carrying out a check on the parameters to pass to our list of Tickets
+    def generate_ticket(self, quantity_tickets):
+        for i in range(quantity_tickets):
+            while True:
+                try:
+                    print("""
+                    List of the Citys:
 
-    # The function calls the form instance and returns the requested number instance correctly
-    def generator_numbers(self):
-        print("""
-            Enter the desired amount of numbers, remember to enter a minimum amount based on your stake up to a maximum of 10 numbers.
-            Example:          --> "TERNO" MIN 3 NUMBERS MAX 10 NUMBERS <--
-            """)
-        while True:
-            try:
-                n = int(input("Enter the amount of numbers you want to play: "))
-                if self.form == "ambata" and 1 <= n <= 10:
-                    break
-                elif self.form == "ambo" and 2 <= n <= 10:
-                    break
-                elif self.form == "terno" and 3 <= n <= 10:
-                    break
-                elif self.form == "quaterna" and 4 <= n <= 10:
-                    break
-                elif self.form == "cinquina" and 5 <= n <= 10:
-                    break
-                else:
-                    print("It is not possible to play this amount of numbers for the desired form of bet")
-            except ValueError:
-                print("Enter a numeric value")
+                        - Bari 
+                        - Cagliari 
+                        - Firenze 
+                        - Genova 
+                        - Milano 
+                        - Napoli 
+                        - Palermo 
+                        - Roma 
+                        - Torino 
+                        - Venezia
+                        
+                        """ )
+                    chosen_city = input("Enter the city for your bet: ")
+                    chosen_city = chosen_city.strip().lower()
+                    if City.check_cities(chosen_city):
+                        city = chosen_city
+                        break
+                except ValueError:
+                    print("City Non Valid")
 
-        self.numbers = list(sample(range(1, 90 + 1), n))
-        return self.numbers
+            while True:
+                try:
+                    print("""
+                    List of the Bets Types:
+                        
+                        - Ambata
+                        - Ambo 
+                        - Terno 
+                        - Quaterna 
+                        - Cinquina
+                        
+                        """)
+                    chosen_bet = input("Enter the type for your bet: ")
+                    chosen_bet = chosen_bet.strip().lower()
+                    if TicketType.check_bet(chosen_bet):
+                        bet = chosen_bet
+                        break
+                except ValueError:
+                    print("Bet Non Valid")
 
-    def print_ticket(self):
-        Printed.header()
-        Printed.body(self)
+            while True:
+                try:
+                    n = int(input("Enter the amount of numbers you want to play: "))
+                    if bet == "ambata" and 1 <= n <= 10:
+                        quantity_numbers = n
+                        break
+                    elif bet == "ambo" and 2 <= n <= 10:
+                        quantity_numbers = n
+                        break
+                    elif bet == "terno" and 3 <= n <= 10:
+                        quantity_numbers = n
+                        break
+                    elif bet == "quaterna" and 4 <= n <= 10:
+                        quantity_numbers = n
+                        break
+                    elif bet == "cinquina" and 5 <= n <= 10:
+                        quantity_numbers = n
+                        break
+                    else:
+                        print("It is not possible to play this amount of numbers for the desired form of bet")
+                except ValueError:
+                    print("Enter a numeric value")
+ 
+            self.tickets.append(Ticket(city, bet, quantity_numbers))
+    
+            
 
 
-    def __str__(self):
-        return f"{self.city}, {self.form}, {self.numbers}"
-
-
-# test
+    
+#test
 if __name__ == "__main__":
-    ticket = Lotto()
-    Lotto.print_ticket(ticket)
-
+    tickets = Lotto(2)
+    
+    

@@ -9,8 +9,7 @@ class TicketType:
         else:
             return None
 
-
-    # The following function returns a bet parameter when it has been entered correctly
+    # The following function returns a boolean parameter when it has been entered correctly
     @staticmethod
     def check_bet(bet):
         bet = bet.strip().lower()
@@ -22,5 +21,5 @@ class TicketType:
 
 # test
 if __name__ == "__main__":
-    bet = TicketType()
+    bet = TicketType("AmbaTa  ")
     print(bet)
