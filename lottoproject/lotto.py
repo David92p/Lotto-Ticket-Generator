@@ -1,6 +1,5 @@
 from city import City
 from bet import TicketType
-from numbers import Numbers
 from ticket import Ticket
 
 # Logic Class

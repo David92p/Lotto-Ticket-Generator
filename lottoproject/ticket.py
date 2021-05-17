@@ -1,14 +1,22 @@
 from city import City
 from bet import TicketType
-from numbers import Numbers
+
+from random import sample
 
 class Ticket:
     def __init__(self, city, bet, quantity_numbers):
         self.city = City(city)
         self.bet = TicketType(bet)
-        self.numbers = Numbers(quantity_numbers)
+        self.numbers = []
+        self.numbers_generator(quantity_numbers)   
+    
+    def numbers_generator(self, quantity_numbers):
+        numbers = list(sample(range(1, 90 + 1), quantity_numbers))
+        for n in numbers:
+            self.numbers.append(str(n))
         
     def print_ticket(self):
+        numbers = " ".join(self.numbers)
         title = "LOTTO TICKET"
         horizontal = '+'+'-'*40+'+'
         in_line = "+"+ " "*40+"+"
@@ -20,7 +28,7 @@ class Ticket:
         print(in_line)
         print("|",self.bet.bet_type.upper().center(38, " "),"|")
         print(in_line)
-        print("|",self.numbers.bet_numbers.center(38, " "),"|")
+        print("|"," ".join(self.numbers).center(38, " "),"|")
         print(in_line)
         print(horizontal)
         
