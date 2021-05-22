@@ -13,6 +13,13 @@
      
 ##### The official rules on the lottery are available at the following <a href="https://www.lotto-italia.it/lotto" target="_blank">Link</a>
 
+##### In each learning path there is a file where the subdivision of the scripts is explained
+##### The most important, present in each learning path is the main.py file
+
+#### We can start the program through this script.
+#### Enter the following commands in our terminal
+#### Python main.py -n + number of tickets we want to generate
+
 ## Good fun!
 
 
