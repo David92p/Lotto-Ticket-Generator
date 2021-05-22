@@ -13,5 +13,6 @@
 ### 4 [lotto:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/lotto.py)
       - This script introduces the Lotto class. This will be our business logic class
          
-### 5 [test:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/lottoproject/test.py)
-      - This is a momentary test script useful for testing our program.
+### 5 [main:](https://github.com/David92p/Lotto-Ticket-Generator/blob/learning-path-1/main.py)
+      - This file contains the script to start the game from the command line.
+      Follow the general commands for each branch to launch our program on the screen
