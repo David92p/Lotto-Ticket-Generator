@@ -1,5 +1,5 @@
-from city import City
-from bet import TicketType
+from .city import City
+from .bet import TicketType
 
 from random import sample
 

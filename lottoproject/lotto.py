@@ -1,6 +1,6 @@
-from city import City
-from bet import TicketType
-from ticket import Ticket
+from .city import City
+from .bet import TicketType
+from .ticket import Ticket
 
 # Logic Class
 class Lotto:
