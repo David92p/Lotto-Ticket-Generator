@@ -5,8 +5,9 @@ class City:
 
     def __init__(self, city):
         city = city.strip().lower()
+        self.city_type = None
         if City.check_cities(city):
-            self.bet_city = city
+            self.city_type = city
         else:
             return None
 
@@ -19,6 +20,9 @@ class City:
         else:
             print('Incorrect Value')
             return False
+
+    def __str__(self):
+        return self.city_type
     
 
 # test

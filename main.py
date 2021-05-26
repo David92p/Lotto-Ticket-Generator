@@ -1,16 +1,10 @@
 from lottoproject.lotto import Lotto
-from lottoproject.ticket import Ticket
 
 import argparse
 
-
 def start(n):
     lotto = Lotto(n)
-    for i, ticket in enumerate(lotto.tickets, 1):
-        print()
-        print(f"Ticket Number {i}")
-        Ticket.print_ticket(ticket)
-        print()
+    Lotto.printer(lotto)
     print()
     print("---------> Good Luck <---------")
     print()

@@ -1,12 +1,12 @@
 from .city import City
-from .bet import TicketType
+from .bet import Bet
 
 from random import sample
 
 class Ticket:
     def __init__(self, city, bet, quantity_numbers):
         self.city = City(city)
-        self.bet = TicketType(bet)
+        self.bet = Bet(bet)
         self.numbers = []
         self.numbers_generator(quantity_numbers)   
     
@@ -24,17 +24,15 @@ class Ticket:
         print("|",title.center(38, " "),"|")
         print(horizontal)
         print("|"+ " "*40+"|")
-        print("|",self.city.bet_city.upper().center(38, " "),"|")
+        print("|",self.city.city_type.upper().center(38, " "),"|")
         print(in_line)
         print("|",self.bet.bet_type.upper().center(38, " "),"|")
         print(in_line)
         print("|"," ".join(self.numbers).center(38, " "),"|")
         print(in_line)
         print(horizontal)
+
         
-
-   
-
 #test
 if __name__ == "__main__":
     ticket1 = Ticket("Milano", "  AmbaTa  ", 3)
