@@ -1,6 +1,7 @@
 from .city import City
 from .bet import Bet
 from .ticket import Ticket
+from .extractions import ExtractionBoard
 
 # Logic Class
 class Lotto:
@@ -83,11 +84,14 @@ class Lotto:
         return Ticket(city, bet, quantity_numbers)
 
     def printer(self):
+        board = ExtractionBoard()
+        ExtractionBoard.print_board(board)
         for i in range(len(self.tickets)): 
             print()
             print(f"Ticket Number {i+1}")
             Ticket.print_ticket(self.tickets[i])
             print()
+            print(Ticket.set_win(self.tickets[i]))
             print()
             
             

@@ -1,5 +1,6 @@
 from .city import City
 from .bet import Bet
+from .extractions import ExtractionBoard
 
 from random import sample
 
@@ -32,11 +33,39 @@ class Ticket:
         print(in_line)
         print(horizontal)
 
-        
+
+    # Function that checks the numbers of our tickets with the general scoreboard
+    def set_win(self):
+        check = []
+        for city, number in ExtractionBoard.extractions.items():
+            if city == self.city.city_type:
+                for i in range(len(number)):
+                    for n in self.numbers:
+                        if number[i] == int(n):
+                            check.append(int(n))    
+        if len(check) >= 1 and self.bet.bet_type == "ambata":
+            return "Congratulations, it's a winning ticket!"
+        elif len(check) >= 2 and self.bet.bet_type == "ambo":
+            return "Congratulations, it's a winning ticket!"
+        elif len(check) >= 3 and self.bet.bet_type == "terno":
+            return "Congratulations, it's a winning ticket!"
+        elif len(check) >= 4 and self.bet.bet_type == "quaterna":
+            return "Congratulations, it's a winning ticket!"
+        elif len(check) >= 5 and self.bet.bet_type == "cinquina":
+            return "Congratulations, it's a winning ticket!"
+        else:
+            return "Sorry, it's not a winning ticket.."    
+
 #test
 if __name__ == "__main__":
-    ticket1 = Ticket("Milano", "  AmbaTa  ", 3)
-    ticket2 = Ticket("RoMa ", "quAterNA", 10)
+    board = ExtractionBoard
+    ticket1 = Ticket("venezia", "  AmbaTa  ", 10)
+    ticket2 = Ticket("RoMa ", "quAterNA", 7)
+    ExtractionBoard.print_board(board)
+    print()
     Ticket.print_ticket(ticket1)
+    print(Ticket.set_win(ticket1))
     print()
     Ticket.print_ticket(ticket2)
+    print(Ticket.set_win(ticket2))
+
