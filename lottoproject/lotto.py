@@ -91,7 +91,7 @@ class Lotto:
             print(f"Ticket Number {i+1}")
             Ticket.print_ticket(self.tickets[i])
             print()
-            print(Ticket.set_win(self.tickets[i]))
+            print(Ticket.set_win_amount(self.tickets[i]))
             print()
             
             
